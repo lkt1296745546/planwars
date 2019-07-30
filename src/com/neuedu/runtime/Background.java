@@ -29,8 +29,6 @@ public class Background extends BaseSprite implements Moveable, Drawable {
     @Override
 
     public void draw(Graphics g) {
-        System.out.println("g"+g);
-        System.out.println("i"+image);
         g.drawImage(image,getX(),getY(),image.getWidth(null),image.getHeight(null),null);
         move();
     }

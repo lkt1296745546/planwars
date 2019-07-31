@@ -3,6 +3,7 @@ package com.neuedu.runtime;
 import com.neuedu.base.BaseSprite;
 import com.neuedu.base.Drawable;
 import com.neuedu.base.Moveable;
+import com.neuedu.constant.FrameConstant;
 import com.neuedu.util.ImageMap;
 
 import java.awt.*;
@@ -12,7 +13,7 @@ public class Background extends BaseSprite implements Moveable, Drawable {
     private Image image;
 
     public Background() {
-        this(0,0, ImageMap.get("bg1"));
+        this(0, FrameConstant.FRAME_HEIGHT -ImageMap.get("bg1").getHeight(null), ImageMap.get("bg1"));
 
     }
 
@@ -23,7 +24,7 @@ public class Background extends BaseSprite implements Moveable, Drawable {
 
     @Override
     public void move() {
-        setY(getY() - 1);
+        setY(getY() + FrameConstant.GAME_SPEED);
     }
 
     @Override
